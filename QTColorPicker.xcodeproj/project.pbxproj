@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF51BBE81FDA70E7005A8A65 /* UIView+ColorOfPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = FF51BBE71FDA70E7005A8A65 /* UIView+ColorOfPoint.m */; };
+		FF51BBEB1FDA7F43005A8A65 /* ColorPannelView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF51BBEA1FDA7F43005A8A65 /* ColorPannelView.m */; };
+		FFB916351FD8D8B000396F65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB916341FD8D8B000396F65 /* AppDelegate.m */; };
+		FFB916381FD8D8B000396F65 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB916371FD8D8B000396F65 /* ViewController.m */; };
+		FFB9163B1FD8D8B000396F65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB916391FD8D8B000396F65 /* Main.storyboard */; };
+		FFB9163D1FD8D8B000396F65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFB9163C1FD8D8B000396F65 /* Assets.xcassets */; };
+		FFB916401FD8D8B000396F65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB9163E1FD8D8B000396F65 /* LaunchScreen.storyboard */; };
+		FFB916431FD8D8B000396F65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB916421FD8D8B000396F65 /* main.m */; };
+		FFB9164D1FD8D8B000396F65 /* QTColorPickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB9164C1FD8D8B000396F65 /* QTColorPickerTests.m */; };
+		FFB916581FD8D8B000396F65 /* QTColorPickerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB916571FD8D8B000396F65 /* QTColorPickerUITests.m */; };
+		FFB916671FD8D8F700396F65 /* QTColorPannel.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB916661FD8D8F700396F65 /* QTColorPannel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FFB916491FD8D8B000396F65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFB916281FD8D8AF00396F65 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFB9162F1FD8D8B000396F65;
+			remoteInfo = QTColorPicker;
+		};
+		FFB916541FD8D8B000396F65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFB916281FD8D8AF00396F65 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFB9162F1FD8D8B000396F65;
+			remoteInfo = QTColorPicker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FF51BBE61FDA70E7005A8A65 /* UIView+ColorOfPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ColorOfPoint.h"; sourceTree = "<group>"; };
+		FF51BBE71FDA70E7005A8A65 /* UIView+ColorOfPoint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ColorOfPoint.m"; sourceTree = "<group>"; };
+		FF51BBE91FDA7F43005A8A65 /* ColorPannelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorPannelView.h; sourceTree = "<group>"; };
+		FF51BBEA1FDA7F43005A8A65 /* ColorPannelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorPannelView.m; sourceTree = "<group>"; };
+		FFB916301FD8D8B000396F65 /* QTColorPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QTColorPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFB916331FD8D8B000396F65 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FFB916341FD8D8B000396F65 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FFB916361FD8D8B000396F65 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FFB916371FD8D8B000396F65 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FFB9163A1FD8D8B000396F65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FFB9163C1FD8D8B000396F65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FFB9163F1FD8D8B000396F65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FFB916411FD8D8B000396F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFB916421FD8D8B000396F65 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FFB916481FD8D8B000396F65 /* QTColorPickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QTColorPickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFB9164C1FD8D8B000396F65 /* QTColorPickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTColorPickerTests.m; sourceTree = "<group>"; };
+		FFB9164E1FD8D8B000396F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFB916531FD8D8B000396F65 /* QTColorPickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QTColorPickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFB916571FD8D8B000396F65 /* QTColorPickerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTColorPickerUITests.m; sourceTree = "<group>"; };
+		FFB916591FD8D8B000396F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFB916651FD8D8F700396F65 /* QTColorPannel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTColorPannel.h; sourceTree = "<group>"; };
+		FFB916661FD8D8F700396F65 /* QTColorPannel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTColorPannel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FFB9162D1FD8D8B000396F65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFB916451FD8D8B000396F65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFB916501FD8D8B000396F65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FFB916271FD8D8AF00396F65 = {
+			isa = PBXGroup;
+			children = (
+				FFB916321FD8D8B000396F65 /* QTColorPicker */,
+				FFB9164B1FD8D8B000396F65 /* QTColorPickerTests */,
+				FFB916561FD8D8B000396F65 /* QTColorPickerUITests */,
+				FFB916311FD8D8B000396F65 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FFB916311FD8D8B000396F65 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FFB916301FD8D8B000396F65 /* QTColorPicker.app */,
+				FFB916481FD8D8B000396F65 /* QTColorPickerTests.xctest */,
+				FFB916531FD8D8B000396F65 /* QTColorPickerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FFB916321FD8D8B000396F65 /* QTColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				FFB916331FD8D8B000396F65 /* AppDelegate.h */,
+				FFB916341FD8D8B000396F65 /* AppDelegate.m */,
+				FFB916361FD8D8B000396F65 /* ViewController.h */,
+				FFB916371FD8D8B000396F65 /* ViewController.m */,
+				FFB916391FD8D8B000396F65 /* Main.storyboard */,
+				FFB9163C1FD8D8B000396F65 /* Assets.xcassets */,
+				FFB9163E1FD8D8B000396F65 /* LaunchScreen.storyboard */,
+				FFB916411FD8D8B000396F65 /* Info.plist */,
+				FFB916421FD8D8B000396F65 /* main.m */,
+				FFB916651FD8D8F700396F65 /* QTColorPannel.h */,
+				FFB916661FD8D8F700396F65 /* QTColorPannel.m */,
+				FF51BBE61FDA70E7005A8A65 /* UIView+ColorOfPoint.h */,
+				FF51BBE71FDA70E7005A8A65 /* UIView+ColorOfPoint.m */,
+				FF51BBE91FDA7F43005A8A65 /* ColorPannelView.h */,
+				FF51BBEA1FDA7F43005A8A65 /* ColorPannelView.m */,
+			);
+			path = QTColorPicker;
+			sourceTree = "<group>";
+		};
+		FFB9164B1FD8D8B000396F65 /* QTColorPickerTests */ = {
+			isa = PBXGroup;
+			children = (
+				FFB9164C1FD8D8B000396F65 /* QTColorPickerTests.m */,
+				FFB9164E1FD8D8B000396F65 /* Info.plist */,
+			);
+			path = QTColorPickerTests;
+			sourceTree = "<group>";
+		};
+		FFB916561FD8D8B000396F65 /* QTColorPickerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FFB916571FD8D8B000396F65 /* QTColorPickerUITests.m */,
+				FFB916591FD8D8B000396F65 /* Info.plist */,
+			);
+			path = QTColorPickerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FFB9162F1FD8D8B000396F65 /* QTColorPicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFB9165C1FD8D8B000396F65 /* Build configuration list for PBXNativeTarget "QTColorPicker" */;
+			buildPhases = (
+				FFB9162C1FD8D8B000396F65 /* Sources */,
+				FFB9162D1FD8D8B000396F65 /* Frameworks */,
+				FFB9162E1FD8D8B000396F65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QTColorPicker;
+			productName = QTColorPicker;
+			productReference = FFB916301FD8D8B000396F65 /* QTColorPicker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FFB916471FD8D8B000396F65 /* QTColorPickerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFB9165F1FD8D8B000396F65 /* Build configuration list for PBXNativeTarget "QTColorPickerTests" */;
+			buildPhases = (
+				FFB916441FD8D8B000396F65 /* Sources */,
+				FFB916451FD8D8B000396F65 /* Frameworks */,
+				FFB916461FD8D8B000396F65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FFB9164A1FD8D8B000396F65 /* PBXTargetDependency */,
+			);
+			name = QTColorPickerTests;
+			productName = QTColorPickerTests;
+			productReference = FFB916481FD8D8B000396F65 /* QTColorPickerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FFB916521FD8D8B000396F65 /* QTColorPickerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFB916621FD8D8B000396F65 /* Build configuration list for PBXNativeTarget "QTColorPickerUITests" */;
+			buildPhases = (
+				FFB9164F1FD8D8B000396F65 /* Sources */,
+				FFB916501FD8D8B000396F65 /* Frameworks */,
+				FFB916511FD8D8B000396F65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FFB916551FD8D8B000396F65 /* PBXTargetDependency */,
+			);
+			name = QTColorPickerUITests;
+			productName = QTColorPickerUITests;
+			productReference = FFB916531FD8D8B000396F65 /* QTColorPickerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FFB916281FD8D8AF00396F65 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = zhouqitian;
+				TargetAttributes = {
+					FFB9162F1FD8D8B000396F65 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					FFB916471FD8D8B000396F65 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FFB9162F1FD8D8B000396F65;
+					};
+					FFB916521FD8D8B000396F65 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FFB9162F1FD8D8B000396F65;
+					};
+				};
+			};
+			buildConfigurationList = FFB9162B1FD8D8AF00396F65 /* Build configuration list for PBXProject "QTColorPicker" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FFB916271FD8D8AF00396F65;
+			productRefGroup = FFB916311FD8D8B000396F65 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FFB9162F1FD8D8B000396F65 /* QTColorPicker */,
+				FFB916471FD8D8B000396F65 /* QTColorPickerTests */,
+				FFB916521FD8D8B000396F65 /* QTColorPickerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FFB9162E1FD8D8B000396F65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFB916401FD8D8B000396F65 /* LaunchScreen.storyboard in Resources */,
+				FFB9163D1FD8D8B000396F65 /* Assets.xcassets in Resources */,
+				FFB9163B1FD8D8B000396F65 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFB916461FD8D8B000396F65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFB916511FD8D8B000396F65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FFB9162C1FD8D8B000396F65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFB916671FD8D8F700396F65 /* QTColorPannel.m in Sources */,
+				FFB916381FD8D8B000396F65 /* ViewController.m in Sources */,
+				FF51BBE81FDA70E7005A8A65 /* UIView+ColorOfPoint.m in Sources */,
+				FFB916431FD8D8B000396F65 /* main.m in Sources */,
+				FF51BBEB1FDA7F43005A8A65 /* ColorPannelView.m in Sources */,
+				FFB916351FD8D8B000396F65 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFB916441FD8D8B000396F65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFB9164D1FD8D8B000396F65 /* QTColorPickerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFB9164F1FD8D8B000396F65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFB916581FD8D8B000396F65 /* QTColorPickerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FFB9164A1FD8D8B000396F65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFB9162F1FD8D8B000396F65 /* QTColorPicker */;
+			targetProxy = FFB916491FD8D8B000396F65 /* PBXContainerItemProxy */;
+		};
+		FFB916551FD8D8B000396F65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFB9162F1FD8D8B000396F65 /* QTColorPicker */;
+			targetProxy = FFB916541FD8D8B000396F65 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FFB916391FD8D8B000396F65 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFB9163A1FD8D8B000396F65 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FFB9163E1FD8D8B000396F65 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFB9163F1FD8D8B000396F65 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FFB9165A1FD8D8B000396F65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FFB9165B1FD8D8B000396F65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FFB9165D1FD8D8B000396F65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YDJE97CX57;
+				INFOPLIST_FILE = QTColorPicker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sansi.QTColorPicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FFB9165E1FD8D8B000396F65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YDJE97CX57;
+				INFOPLIST_FILE = QTColorPicker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sansi.QTColorPicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FFB916601FD8D8B000396F65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YDJE97CX57;
+				INFOPLIST_FILE = QTColorPickerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sansi.QTColorPickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QTColorPicker.app/QTColorPicker";
+			};
+			name = Debug;
+		};
+		FFB916611FD8D8B000396F65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YDJE97CX57;
+				INFOPLIST_FILE = QTColorPickerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sansi.QTColorPickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QTColorPicker.app/QTColorPicker";
+			};
+			name = Release;
+		};
+		FFB916631FD8D8B000396F65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YDJE97CX57;
+				INFOPLIST_FILE = QTColorPickerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sansi.QTColorPickerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = QTColorPicker;
+			};
+			name = Debug;
+		};
+		FFB916641FD8D8B000396F65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YDJE97CX57;
+				INFOPLIST_FILE = QTColorPickerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sansi.QTColorPickerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = QTColorPicker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FFB9162B1FD8D8AF00396F65 /* Build configuration list for PBXProject "QTColorPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFB9165A1FD8D8B000396F65 /* Debug */,
+				FFB9165B1FD8D8B000396F65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFB9165C1FD8D8B000396F65 /* Build configuration list for PBXNativeTarget "QTColorPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFB9165D1FD8D8B000396F65 /* Debug */,
+				FFB9165E1FD8D8B000396F65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFB9165F1FD8D8B000396F65 /* Build configuration list for PBXNativeTarget "QTColorPickerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFB916601FD8D8B000396F65 /* Debug */,
+				FFB916611FD8D8B000396F65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFB916621FD8D8B000396F65 /* Build configuration list for PBXNativeTarget "QTColorPickerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFB916631FD8D8B000396F65 /* Debug */,
+				FFB916641FD8D8B000396F65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FFB916281FD8D8AF00396F65 /* Project object */;
+}
