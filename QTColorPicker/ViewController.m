@@ -11,7 +11,7 @@
 #import "ColorPannelView.h"
 #define screenW self.view.bounds.size.width
 #define screenH self.view.bounds.size.height
-
+#define RGB(r,g,b) [UIColor colorWithRed:r/255.f green:g/255.f blue:b/255.f alpha:1.f]
 
 @interface ViewController ()<QTColorPannelDelegate>
 @property (nonatomic,strong) QTColorPannel * turntable;;
@@ -31,17 +31,28 @@
     _turntable.backgroundColor = [UIColor clearColor];
     _turntable.delegate = self;
     [_turntable setCenter:self.view.center];
-//    [self.view addSubview:_turntable];
-
-    ColorPannelView *view = [[ColorPannelView alloc] initWithFrame:CGRectMake(0, 0, screenW - 50, screenW - 50)];
-    view.backgroundColor = [UIColor clearColor];
-    
-    [self.view addSubview:view];
+    [self.view addSubview:_turntable];
 
 }
 
 - (void)pannelRotateWithColor:(UIColor *)color{
     self.view.backgroundColor = color;
+}
+
+- (IBAction)redAction:(id)sender {
+    [self.turntable rotateToColor:RGB(255, 0, 0)];
+}
+
+- (IBAction)blueAction:(id)sender {
+    [self.turntable rotateToColor:RGB(0, 0, 255)];
+}
+
+- (IBAction)greenAction:(id)sender {
+    [self.turntable rotateToColor:RGB(0, 255, 0)];
+}
+
+- (IBAction)randomAction:(id)sender {
+    [self.turntable rotateToColor:[UIColor redColor]];
 }
 
 

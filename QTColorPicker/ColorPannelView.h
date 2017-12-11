@@ -10,4 +10,8 @@
 
 @interface ColorPannelView : UIView
 
+
+- (void)rotateToColor:(UIColor *)color;
+- (UIColor *)colorWithAngle:(CGFloat)angle;
+
 @end

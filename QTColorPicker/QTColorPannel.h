@@ -23,4 +23,6 @@
 @property (nonatomic ,strong) UIColor *currentColor;
 @property (nonatomic, weak) id <QTColorPannelDelegate> delegate;
 
+- (void)rotateToColor:(UIColor *)color;
+
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "ColorPannelView.h"
-
+#import "UIColor+Similar.h"
 @implementation ColorPannelView
 
 #define RGB(r,g,b) [UIColor colorWithRed:r/6.f green:g/6.f blue:b/6.f alpha:1.f]
@@ -15,10 +15,9 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     // Drawing code
-
     CGFloat startAng = -M_PI/36.f;
     for (int i = 0; i < 36; i++) {
-        [self drawArcWithStartAngel:startAng andEndAngle:startAng + M_PI/18.f andColor:[self colorArray][i]];
+        [self drawArcWithStartAngel:startAng andEndAngle:startAng + M_PI/18.f andColor:[self colorArray][i] andRadius:rect.size.width/2.f];
         startAng +=M_PI/18.f;
     }
 
@@ -63,19 +62,56 @@
              RGB(6, 0, 1),];
 }
 
--(void)drawArcWithStartAngel:(CGFloat)startAngle andEndAngle:(CGFloat)endAngle andColor:(UIColor *)fillColor{
+- (void)rotateToColor:(UIColor *)color{
+    NSUInteger targetIdx = 0;
+    CGFloat compVal = MAXFLOAT;
+    for (UIColor *existColor in [self colorArray]) {
+        if (CGColorEqualToColor(color.CGColor, existColor.CGColor)) {
+            targetIdx = [[self colorArray] indexOfObject:existColor];
+            break;
+        }else{
+            if ([existColor isSimilarWithColor:color] <= compVal) {
+                targetIdx = [[self colorArray] indexOfObject:existColor];
+                compVal = [existColor isSimilarWithColor:color];
+            }
+        }
+    }
+    [UIView animateWithDuration:0.5 animations:^{
+        CGFloat targetAngle = M_PI/2.f*3.f - M_PI/18.f*targetIdx  ;
+        NSLog(@"%f",targetAngle);
+        CGAffineTransform transform = CGAffineTransformMakeRotation(targetAngle);
+        [self setTransform:transform];
+    }];
+}
+
+
+- (UIColor *)colorWithAngle:(CGFloat)angle{
+    int colorIndex = (angle + M_PI/36.f)/(M_PI/18.f);
+    colorIndex -= 9;
+    if (colorIndex < 0) {
+        colorIndex = 36 + colorIndex;
+    }
+    if (colorIndex < 0 || colorIndex >= 36) {
+        return nil;
+    }else{
+        return (UIColor *)[[self colorArray] objectAtIndex:colorIndex];
+    }
+}
+
+
+-(void)drawArcWithStartAngel:(CGFloat)startAngle andEndAngle:(CGFloat)endAngle andColor:(UIColor *)fillColor andRadius:(CGFloat)radius{
     UIBezierPath *path=[UIBezierPath bezierPath];
     [path moveToPoint:self.center];
-    [path addLineToPoint:CGPointMake(cos(startAngle)*100+self.center.x, sin(startAngle)*100+self.center.y)];
-    [path addArcWithCenter:self.center radius:100 startAngle:startAngle endAngle:endAngle clockwise:YES];
-    [path moveToPoint:CGPointMake(cos(endAngle)*100+self.center.x, sin(endAngle)*100+self.center.y)];
+    [path addLineToPoint:CGPointMake(cos(startAngle)*radius+self.center.x, sin(startAngle)*radius+self.center.y)];
+    [path addArcWithCenter:self.center radius:radius startAngle:startAngle endAngle:endAngle clockwise:YES];
+    [path moveToPoint:CGPointMake(cos(endAngle)*radius+self.center.x, sin(endAngle)*radius+self.center.y)];
     [path addLineToPoint:self.center];
     [path closePath];
 
     CAShapeLayer *shapeLayer=[CAShapeLayer layer];
     shapeLayer.frame=self.frame;
     shapeLayer.path=path.CGPath;
-    shapeLayer.strokeColor= [UIColor clearColor].CGColor;
+    shapeLayer.strokeColor= fillColor.CGColor;
     shapeLayer.fillColor=fillColor.CGColor;
     [self.layer addSublayer:shapeLayer];
 }
