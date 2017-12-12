@@ -15,14 +15,20 @@
 - (void)pannelRotateWithColor:(UIColor *)color;
 - (void)pannelEndRotateWithColor:(UIColor *)color;
 
+- (void)brightnessChangingWithValue:(CGFloat)value;
+- (void)brightnessEndChangeWithValue:(CGFloat)value;
+
 @end
 
 
 @interface QTColorPannel : UIView <QTColorPannelDelegate>
 
 @property (nonatomic ,strong) UIColor *currentColor;
+@property (nonatomic ,assign) CGFloat brightness;
+@property (nonatomic ,assign) BOOL brightnessContinus;
+
 @property (nonatomic, weak) id <QTColorPannelDelegate> delegate;
 
 - (void)rotateToColor:(UIColor *)color;
-
+- (void)changeHudWithPercent:(CGFloat)percent;
 @end

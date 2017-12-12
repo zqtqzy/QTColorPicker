@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		FF51BBE81FDA70E7005A8A65 /* UIView+ColorOfPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = FF51BBE71FDA70E7005A8A65 /* UIView+ColorOfPoint.m */; };
-		FF51BBEB1FDA7F43005A8A65 /* ColorPannelView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF51BBEA1FDA7F43005A8A65 /* ColorPannelView.m */; };
-		FF8F884F1FDE21BF0051DE06 /* MaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8F884E1FDE21BF0051DE06 /* MaskView.m */; };
+		FF51BBEB1FDA7F43005A8A65 /* QTColorPannelView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF51BBEA1FDA7F43005A8A65 /* QTColorPannelView.m */; };
+		FF5456701FDF6FA100D9641A /* QTShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF54566F1FDF6FA100D9641A /* QTShadowView.m */; };
+		FF6ABF6D1FDFB13D005FBC1E /* QTHudView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6ABF6C1FDFB13D005FBC1E /* QTHudView.m */; };
+		FF8F884F1FDE21BF0051DE06 /* QTMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8F884E1FDE21BF0051DE06 /* QTMaskView.m */; };
 		FF8F88541FDE47490051DE06 /* UIColor+Similar.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8F88531FDE47490051DE06 /* UIColor+Similar.m */; };
 		FFB916351FD8D8B000396F65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB916341FD8D8B000396F65 /* AppDelegate.m */; };
 		FFB916381FD8D8B000396F65 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB916371FD8D8B000396F65 /* ViewController.m */; };
@@ -42,10 +44,14 @@
 /* Begin PBXFileReference section */
 		FF51BBE61FDA70E7005A8A65 /* UIView+ColorOfPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ColorOfPoint.h"; sourceTree = "<group>"; };
 		FF51BBE71FDA70E7005A8A65 /* UIView+ColorOfPoint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ColorOfPoint.m"; sourceTree = "<group>"; };
-		FF51BBE91FDA7F43005A8A65 /* ColorPannelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorPannelView.h; sourceTree = "<group>"; };
-		FF51BBEA1FDA7F43005A8A65 /* ColorPannelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorPannelView.m; sourceTree = "<group>"; };
-		FF8F884D1FDE21BF0051DE06 /* MaskView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaskView.h; sourceTree = "<group>"; };
-		FF8F884E1FDE21BF0051DE06 /* MaskView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaskView.m; sourceTree = "<group>"; };
+		FF51BBE91FDA7F43005A8A65 /* QTColorPannelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTColorPannelView.h; sourceTree = "<group>"; };
+		FF51BBEA1FDA7F43005A8A65 /* QTColorPannelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTColorPannelView.m; sourceTree = "<group>"; };
+		FF54566E1FDF6FA100D9641A /* QTShadowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTShadowView.h; sourceTree = "<group>"; };
+		FF54566F1FDF6FA100D9641A /* QTShadowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTShadowView.m; sourceTree = "<group>"; };
+		FF6ABF6B1FDFB13D005FBC1E /* QTHudView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTHudView.h; sourceTree = "<group>"; };
+		FF6ABF6C1FDFB13D005FBC1E /* QTHudView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTHudView.m; sourceTree = "<group>"; };
+		FF8F884D1FDE21BF0051DE06 /* QTMaskView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTMaskView.h; sourceTree = "<group>"; };
+		FF8F884E1FDE21BF0051DE06 /* QTMaskView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTMaskView.m; sourceTree = "<group>"; };
 		FF8F88521FDE47490051DE06 /* UIColor+Similar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Similar.h"; sourceTree = "<group>"; };
 		FF8F88531FDE47490051DE06 /* UIColor+Similar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Similar.m"; sourceTree = "<group>"; };
 		FFB916301FD8D8B000396F65 /* QTColorPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QTColorPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,10 +137,14 @@
 				FF51BBE71FDA70E7005A8A65 /* UIView+ColorOfPoint.m */,
 				FF8F88521FDE47490051DE06 /* UIColor+Similar.h */,
 				FF8F88531FDE47490051DE06 /* UIColor+Similar.m */,
-				FF51BBE91FDA7F43005A8A65 /* ColorPannelView.h */,
-				FF51BBEA1FDA7F43005A8A65 /* ColorPannelView.m */,
-				FF8F884D1FDE21BF0051DE06 /* MaskView.h */,
-				FF8F884E1FDE21BF0051DE06 /* MaskView.m */,
+				FF51BBE91FDA7F43005A8A65 /* QTColorPannelView.h */,
+				FF51BBEA1FDA7F43005A8A65 /* QTColorPannelView.m */,
+				FF8F884D1FDE21BF0051DE06 /* QTMaskView.h */,
+				FF8F884E1FDE21BF0051DE06 /* QTMaskView.m */,
+				FF54566E1FDF6FA100D9641A /* QTShadowView.h */,
+				FF54566F1FDF6FA100D9641A /* QTShadowView.m */,
+				FF6ABF6B1FDFB13D005FBC1E /* QTHudView.h */,
+				FF6ABF6C1FDFB13D005FBC1E /* QTHudView.m */,
 			);
 			path = QTColorPicker;
 			sourceTree = "<group>";
@@ -294,10 +304,12 @@
 				FFB916381FD8D8B000396F65 /* ViewController.m in Sources */,
 				FF51BBE81FDA70E7005A8A65 /* UIView+ColorOfPoint.m in Sources */,
 				FFB916431FD8D8B000396F65 /* main.m in Sources */,
-				FF51BBEB1FDA7F43005A8A65 /* ColorPannelView.m in Sources */,
+				FF51BBEB1FDA7F43005A8A65 /* QTColorPannelView.m in Sources */,
 				FF8F88541FDE47490051DE06 /* UIColor+Similar.m in Sources */,
+				FF5456701FDF6FA100D9641A /* QTShadowView.m in Sources */,
+				FF6ABF6D1FDFB13D005FBC1E /* QTHudView.m in Sources */,
 				FFB916351FD8D8B000396F65 /* AppDelegate.m in Sources */,
-				FF8F884F1FDE21BF0051DE06 /* MaskView.m in Sources */,
+				FF8F884F1FDE21BF0051DE06 /* QTMaskView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

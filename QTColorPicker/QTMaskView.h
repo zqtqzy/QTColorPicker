@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MaskView : UIView
+@interface QTMaskView : UIView
 
 @end

@@ -6,9 +6,9 @@
 //  Copyright © 2017年 zhouqitian. All rights reserved.
 //
 
-#import "ColorPannelView.h"
+#import "QTColorPannelView.h"
 #import "UIColor+Similar.h"
-@implementation ColorPannelView
+@implementation QTColorPannelView
 
 #define RGB(r,g,b) [UIColor colorWithRed:r/6.f green:g/6.f blue:b/6.f alpha:1.f]
 // Only override drawRect: if you perform custom drawing.
@@ -115,5 +115,6 @@
     shapeLayer.fillColor=fillColor.CGColor;
     [self.layer addSublayer:shapeLayer];
 }
+
 
 @end

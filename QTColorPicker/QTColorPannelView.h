@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ColorPannelView : UIView
+@interface QTColorPannelView : UIView
 
 
 - (void)rotateToColor:(UIColor *)color;
