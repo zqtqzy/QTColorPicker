@@ -18,12 +18,12 @@
     CGFloat _initAngle; /**< 旋转之前角度 */
     CGPoint _initPoint;
 
-    CADisplayLink *dis; //定时器
-    int updateCount;    //需要刷新次数
-    int currentCount;   //当前刷新次数
-    CGPoint velocity;   //速度
-
-    BOOL isAdd;
+//    CADisplayLink *dis; //定时器
+//    int updateCount;    //需要刷新次数
+//    int currentCount;   //当前刷新次数
+//    CGPoint velocity;   //速度
+//
+//    BOOL isAdd;
 
 }
 @property (nonatomic, strong) QTColorPannelView *colorView;
@@ -31,6 +31,7 @@
 @property (nonatomic, strong) QTMaskView *maskView;
 @property (nonatomic, strong) QTHudView *hudView;
 
+@property (nonatomic, strong) UIImageView *centerImage;
 @property (nonatomic, strong) UIPanGestureRecognizer *colorPan;
 @property (nonatomic, strong) UIPanGestureRecognizer *brightnessPan;
 
@@ -62,9 +63,19 @@
         [_maskView setCenter:CGPointMake(frame.size.width/2.f, frame.size.width/2.f)];
         [self addSubview:_maskView];
 
+        _centerImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, width/2.f, width/2.f)];
+        _centerImage.contentMode = UIViewContentModeScaleAspectFit;
+        _centerImage.layer.cornerRadius = width/4.f;
+        _centerImage.clipsToBounds = YES;
+        [_centerImage setCenter:CGPointMake(frame.size.width/2.f, frame.size.width/2.f)];
+        [_centerImage setImage:[self imageWithId:1]];
+        [self addSubview:_centerImage];
+
+
         _colorPan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(colorPanAction:)];
         _colorPan.delegate = self;
         [self addGestureRecognizer:_colorPan];
+
 
         _brightnessPan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(brightnessPanAction:)];
         _brightnessPan.delegate = self;
@@ -79,10 +90,18 @@
     return self;
 }
 
+
 - (void)parametersInit{
     self.brightnessContinus = YES;
     self.brightness = 0;
     self.currentColor = [UIColor redColor];
+}
+
+
+
+- (UIImage *)imageWithId:(int)Id{
+    NSLog(@"index:%d",Id);
+    return [UIImage imageNamed:[NSString stringWithFormat:@"up_%d",Id]];
 }
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)pan{
@@ -152,9 +171,11 @@
     }else if (pan.state == UIGestureRecognizerStateChanged) {
 
 
-        CGFloat distance = -(currentPoint.y - _initPoint.y)/5.f;
+        CGFloat distance = -(currentPoint.y - _initPoint.y)/1.5f;
 
         [self updateBrightnessWithDicstance:distance];
+
+
         if (self.brightnessContinus) {
             [self.hudView changeHudWithPercent:self.brightness/100.f];
         }
@@ -172,56 +193,60 @@
             [self.delegate brightnessEndChangeWithValue:self.brightness];
         }
 
-        CGFloat distance = -(currentPoint.y - _initPoint.y);
-        if (distance > 0) {
-            isAdd = YES;
-        }else{
-            isAdd = NO;
-        }
-
-        velocity = [pan velocityInView:self];
-        CGFloat magnitude = ABS(velocity.y) ;
-        CGFloat slideMult = magnitude / 200;
-        float slideFactor = 0.1 * slideMult;
-
-        updateCount = slideFactor * 120 + 1;
-        currentCount = 0;
-        dis = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateView)];
-        [dis addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+//        CGFloat distance = -(currentPoint.y - _initPoint.y);
+//        if (distance > 0) {
+//            isAdd = YES;
+//        }else{
+//            isAdd = NO;
+//        }
+//
+//        velocity = [pan velocityInView:self];
+//        CGFloat magnitude = ABS(velocity.y) ;
+//        CGFloat slideMult = magnitude / 200;
+//        float slideFactor = 0.1 * slideMult;
+//
+//        updateCount = slideFactor * 120 + 1;
+//        currentCount = 0;
+//        dis = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateView)];
+//        [dis addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
 
 
     }
 }
-
-- (void)updateView{
-    currentCount++;
-    if (currentCount>updateCount || currentCount>60) {
-
-        [dis removeFromRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
-        [dis invalidate];
-        dis = nil;
-    }else{
-        if (isAdd) {
-            self.brightness += ABS(velocity.y)/currentCount;
-        }else{
-            self.brightness -= ABS(velocity.y)/currentCount;
-        }
-
-        [self.hudView changeHudWithPercent:self.brightness/100.f];
-    }
-
-
-}
+//
+//- (void)updateView{
+//    currentCount++;
+//    if (currentCount>updateCount || currentCount>60) {
+//
+//        [dis removeFromRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+//        [dis invalidate];
+//        dis = nil;
+//    }else{
+//        if (isAdd) {
+//            self.brightness -= ABS(velocity.y)/currentCount;
+//        }else{
+//            self.brightness += ABS(velocity.y)/currentCount;
+//        }
+//
+//        [self.hudView changeHudWithPercent:self.brightness/100.f];
+//    }
+//
+//
+//}
 
 
 - (void)updateBrightnessWithDicstance:(CGFloat)distance{
     self.brightness += distance;
+
+
 
     if (self.brightness < 0) {
         self.brightness = 0;
     }else if(self.brightness > 100){
         self.brightness = 100;
     }
+
+    [self.centerImage setImage:[self imageWithId:(int)self.brightness%10+1]];
 }
 
 - (void)rotateToColor:(UIColor *)color{
